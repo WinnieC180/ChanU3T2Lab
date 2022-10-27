@@ -1,11 +1,15 @@
-public class Main {
-    public static void main(String[] arg) {
-        int score = 0;
-        String grade = "";  // initialize to empty string
+public class ScopeError {
+    private int score;
 
+    public ScopeError(int score) {
+        this.score = score;
+    }
+
+    public String grade() {
+        String grade = "";
         if (score >= 90) {
             grade = "A";
-        } else if (score >= 80) {
+        } else if (score >= 80){
             grade = "B";
         } else if (score >= 70) {
             grade = "C";
@@ -14,7 +18,6 @@ public class Main {
         } else {
             grade = "F";
         }
-
-        System.out.println("Your grade is: " + grade);
+        return grade;
     }
 }
